@@ -1,0 +1,30 @@
+.statistics{
+  background-image: url("../../assets/img/statistics-bg.jpg");
+  /* background-position:0 150px; */
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding:5em 0;
+  position: relative;
+  color:#fff !important;
+}
+.statistics::before{
+  content:"";
+  display: block;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  background: rgba(0,0,0,0.6);
+}
+.statistics .stat_no h2 i{
+  color:var(--color-secondary);
+}
+.stat_no{
+  text-align:center;
+}
+.about{
+padding:40px 0;
+}

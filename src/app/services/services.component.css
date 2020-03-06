@@ -1,0 +1,9 @@
+.program-pic{
+  box-shadow: 1px -4px 10px 1px rgba(0,0,0,0.2);
+}
+.program-pic img{
+  width:100% !important;
+}
+.each-program .content{
+  box-shadow: 1px 4px 10px 1px rgba(0,0,0,0.2);
+}

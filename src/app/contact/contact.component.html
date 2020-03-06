@@ -1,0 +1,130 @@
+<!-- Contact Us -->
+<div id="contact-page">
+  <div class="contact">
+     <div class="container">
+        <div class="row">
+           <div class="col-sm-12">
+              <div class="title-section">
+                 <div class="title-content">
+                    <h2 class="wow slideInUp"><span>Get In <i>Touch</i></span></h2>
+                 </div>
+              </div>
+            </div>
+         </div>
+          <div class="row">
+             <div class="col-sm-4">
+                <div class="adress-block">
+                   <div class="each-block">
+                      <div class="inner">
+                         <div class="icon"><span class="icon-location-pin"></span></div>
+                         <h4>ADDRESS</h4>
+                         <div class="text">4<sup>th</sup> Floor , Mayurinandana Building<br> Gujjanagundla, Guntur, Andhrapradesh - 520001</div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="col-sm-4">
+                <div class="each-block">
+                   <div class="inner">
+                      <div class="icon"><span class="icon-envelope"></span></div>
+                      <h4>EMAIL</h4>
+                      <div class="text"><a href="mailto:contact@monave.in">contact@monave.in</a></div>
+                   </div>
+                </div>
+             </div>
+             <div class="col-sm-4">
+               <div class="each-block">
+                   <div class="inner">
+                      <div class="icon"><span class="icon-screen-smartphone"></span></div>
+                      <h4>PHONE</h4>
+                      <div class="text"><a href="tel:09949270864">(+91) 9949270864</a></div>
+                   </div>
+                </div>
+             </div>
+          </div>
+           <div class="row">
+
+             <div class="col-sm-6">
+                <div class="contact-form">
+                   <div class="title-section">
+                      <div class="title-content">
+                         <h2 class="wow slideInUp"><span>Client <i> Quries</i></span></h2>
+                      </div>
+                   </div>
+                   <form #clientform >
+                      <div class="form-group">
+                         <label for="name">Name <small>*</small></label>
+                         <input [(ngModel)] = "currentQuery.name" type="text" name="name" id="name" class="form-control" required placeholder="Name"/>
+                         <div id="name_error" *ngIf="nameError" class="error">{{ nameError }}</div>
+                      </div>
+                      <div class="form-group">
+                         <label for="email"> Email <small>*</small></label>
+                         <input [(ngModel)] = "currentQuery.email" type="email" name="email" id="email" class="form-control" required placeholder="Email"/>
+                         <div id="email_error" *ngIf="emailError" class="error"> {{ emailError }} </div>
+                      </div>
+                      <div class="form-group">
+                         <label for="number"> Phone Number <small>*</small></label>
+                         <input [(ngModel)] = "currentQuery.mobile" type="text" name="phone" id="phone" class="form-control" required placeholder="Number"/>
+                         <div id="phone_error" *ngIf="mobileError" class="error"> {{ mobileError }} </div>
+                      </div>
+                      <div class="form-group">
+                         <label for="message"> Message</label>
+                         <textarea [(ngModel)] = "currentQuery.message"  name="message" id="message" class="form-control" rows="5" required placeholder="Message"></textarea>
+                         <div class="error" *ngIf="messageError" id="message_error"> {{ messageError }} </div>
+                      </div>
+                      <div class="contact-btn">
+                         <button (click) = "querySubmit($event)" type="button" class="btn btn-info"><i class="ion-paper-airplane"></i> SEND MESSAGE</button>
+                         <div class="sMessage"></div>
+                      </div>
+                   </form>
+                </div>
+             </div>
+
+
+     <div class="col-sm-6 col-md-5 col-md-offset-1">
+                <div class="contact-form">
+                   <div class="title-section">
+                      <div class="title-content">
+                         <h2 class="wow slideInUp"><span>General <i>Quries</i></span></h2>
+                      </div>
+                   </div>
+                   <form id="contact-us">
+                      <input type="hidden" name="client_form_id" value="22">
+                      <div class="form-group">
+                         <label for="name">Name <small>*</small></label>
+                         <input type="text" name="name" id="name" class="form-control" placeholder="Name"/>
+                         <div id="name_error" class="error"></div>
+                      </div>
+                      <div class="form-group">
+                         <label for="email"> Email <small>*</small></label>
+                         <input type="email" name="email" id="email" class="form-control" placeholder="Email"/>
+                         <div id="email_error" class="error"></div>
+                      </div>
+                      <div class="form-group">
+                         <label for="number"> Phone Number <small>*</small></label>
+                         <input type="text" name="phone" id="phone" class="form-control" placeholder="Number"/>
+                         <div id="phone_error" class="error"></div>
+                      </div>
+                      <div class="form-group">
+                         <label for="message"> Message</label>
+                         <textarea name="message" id="message" class="form-control" rows="5" placeholder="Message"></textarea>
+                         <div class="error" id="message_error"></div>
+                      </div>
+                      <div class="contact-btn">
+                         <button type="submit" class="btn btn-info"><i class="ion-paper-airplane"></i> SEND MESSAGE</button>
+                         <div class="sMessage"></div>
+                      </div>
+                   </form>
+                </div>
+             </div>
+
+
+           </div>
+        </div>
+     </div>
+  <!-- Map -->
+  <div id="map">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.0024615107873!2d80.40875056481117!3d16.322818488724785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a358a8751053b0d%3A0xc2bb8f7d22654c40!2sGujjanagundla%2C%20Guntur%2C%20Andhra%20Pradesh%20522006!5e0!3m2!1sen!2sin!4v1583296990833!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  </div>
+  <app-footer></app-footer>
+</div>

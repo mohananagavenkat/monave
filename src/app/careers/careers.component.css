@@ -1,0 +1,15 @@
+#career-page{
+  padding-top:3em;
+}
+.panel-heading{
+cursor: pointer;
+}
+.title-section .title-content h2{
+font-size: 25px;
+}
+.jobs-block .panel-group .panel{
+  margin-top:1em;
+}
+.jobs-block .panel-group .panel-heading{
+  padding:1.2em;
+}
