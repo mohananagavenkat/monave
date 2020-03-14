@@ -15,11 +15,10 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit(){
-    this.titleService.setTitle("This Is Default Tiltile");
-    this.metaService.addTag({ name:'description' , content:"This is the demonstartion of using Angular4 Bulitin Meta Service. This is very useful to produce dynamic meta tags , and even we can update existing meta tags " });
-    this.metaService.addTag( {name:'keywords',content:'Angular4 Meta Service , dynamic meta tags for an angular application'} );
-    this.metaService.addTag( { name:"author" , content:'Mohana Naga Venkat.Sayempu' } );
-    this.metaService.addTag( { name:"custom-meta" , content:'This is my custom meta tag' } );
+    this.metaService.addTag({name:"",content:""});
+    this.metaService.addTag({name:"",content:""});
+    this.metaService.addTag({name:"",content:""});
+    this.metaService.addTag({name:"",content:""});
     this.getAuthor();
     this.getAllMeta();
  }
