@@ -17,6 +17,7 @@ const appRoutes:Routes = [
   {path:"services" , component:ServicesComponent},
   {path:"careers" , component:CareersComponent},
   {path:"contact" , component:ContactComponent},
+  {path:"**" , redirectTo:'404.html'},
 ];
 
 

@@ -1,5 +1,5 @@
 .statistics{
-  background-image: url("../../assets/img/statistics-bg.jpg");
+  background-image: url("/assets/img/statistics-bg.jpg");
   /* background-position:0 150px; */
   -webkit-background-size: cover;
   background-size: cover;
