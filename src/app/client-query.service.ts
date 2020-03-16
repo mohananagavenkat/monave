@@ -7,16 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class ClientQueryService {
 
-  queryDocument;
+  clientQueryCollection;
   previousQuries:Observable<any>;
 
   constructor(private db:AngularFireDatabase) {
-    this.queryDocument = this.db.list('/clientquries');
-    this.previousQuries = this.queryDocument.valueChanges();
+    this.clientQueryCollection = this.db.list('/clientquries');
+    this.previousQuries = this.clientQueryCollection.valueChanges();
   }
 
   public store(data){
-    this.queryDocument.push(data);
+    this.clientQueryCollection.push(data);
   }
 
 }

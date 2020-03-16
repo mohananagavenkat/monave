@@ -369,6 +369,7 @@
 a{
     color:var(--color-extra);
     text-decoration:underline;
+    margin-left: .5rem;
     -webkit-transition:all .3s ease 0;
     -moz-transition:all .3s ease 0;
     -ms-transition:all .3s ease 0;
@@ -986,7 +987,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .charity-services{
     padding:50px 0 30px;
-    background: #e5e5e5;
+    background: #fafaff;
 }
 .charity-services .service-list{
     text-align:center
@@ -1343,8 +1344,10 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom:20px
 }
 .programs .each-program{
+    min-height: 330px;
     position:relative;
-    background-color:#f7f7f7;
+    /* background-color:#f7f7f7; */
+    box-shadow: 1px 4px 10px 1px rgba(0,0,0,0.2);
     margin-bottom:3%;
     position:relative;
     vertical-align:top;
@@ -1386,7 +1389,7 @@ h1,h2,h3,h4,h5,h6{
     margin-left:0;
     width:45px;
     height:5px;
-    background-color:#c74c93;
+    background-color:#ff0000;
     border-radius:4px;
     -webkit-transition:all .15s ease-in-out;
     -moz-transition:all .15s ease-in-out;
@@ -1400,9 +1403,13 @@ h1,h2,h3,h4,h5,h6{
 .programs .each-program:hover h3{
     color:#fff
 }
+.programs{
+  counter-reset: services;
+}
 .programs .each-program h3 span:after{
     font-family:'Poppins',sans-serif;
-    content:'01';
+    counter-increment: services;
+    content:"0"counter(services);
     position:absolute;
     top:-20px;
     left:-80px;
@@ -1639,11 +1646,15 @@ html{
   padding-top:80px;
 }
 .quotebtn{
-    display:inline-block;
-    /* line-height:48px; */
+    display:flex;
+    align-items: center;
+    justify-content: center;
     background:var(--color-secondary);
     border:none;
-    width:120px;
+    text-decoration: none;
+    /* line-height: 40px; */
+    min-width:120px;
+    flex:0;
     height:40px;
     border-radius:0;
     color:#fff;

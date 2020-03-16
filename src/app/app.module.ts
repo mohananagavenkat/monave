@@ -35,7 +35,7 @@ import { environment } from '../environments/environment'
     BrowserModule,
     AppRouterModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase,"Angular Application"),
+    AngularFireModule.initializeApp(environment.firebase,"monave"),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],

@@ -1,9 +1,16 @@
-.program-pic{
-  box-shadow: 1px -4px 10px 1px rgba(0,0,0,0.2);
+.icon-rocket{
+  margin-left:.2rem;
 }
-.program-pic img{
-  width:100% !important;
+a{
+  margin-left:0;
 }
-.each-program .content{
-  box-shadow: 1px 4px 10px 1px rgba(0,0,0,0.2);
+.content p{
+  text-align: justify;
+}
+.each-program:hover a.quotebtn{
+  background: #fff;
+  color:#14b6e6
+}
+.each-program:hover h3 span:before{
+  background:#fff;
 }
