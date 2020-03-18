@@ -1,0 +1,125 @@
+<div class="innerpages">
+  <div id="careers-page">
+    <div class="jobs-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 current-jobs">
+            <div class="title-section">
+              <div class="title-content">
+                <h2 class="wow slideInUp"><span>Current Openings At <i>monave</i></span></h2>
+              </div>
+            </div>
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+                  <h4 class="panel-title">
+                    Intern Developer
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                  <div class="panel-body">
+
+                    <h5>
+                      Description
+                    </h5>
+
+                    <p>
+                      As a Web Intern at Mutual Mobile, you'll contribute towards creating technical designs, writing
+                      user stories, and grooming the backlog on projects. You'll own easy to medium tasks and see them
+                      through to completion. You'll be a part of the delivery management team and have close interaction
+                      with customer representatives for the duration of the project.
+                    </p>
+
+                    <h5>
+                      Requirements
+                    </h5>
+
+                    <p>You'll probably love this job if you like:
+                      • Building website pages and deploying page content
+                      • Assisting with the implementation, deployment and maintenance efforts
+                      • Working with cross-functional team members to develop page layouts/designs and static and/or
+                      responsive solutions for website content</p>
+
+                    <h5>
+                      Qualifications
+                    </h5>
+                    <p>
+                      • Experience with HTML 5, CSS3, JavaScript, JQuery is a plus
+                    </p>
+
+                    <h5>
+                      Desired Skills
+                    </h5>
+                    <p>• Knowledge of HTML, CSS and JavaScript
+                      • Web Design experience not necessary, but will be helpful in the role
+                      • Ability to work in a fast paced and deadline oriented environment</p>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+                  <h4 class="panel-title">
+                    Business Developement Executive
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p>We are currently looking for an active executive who can bring businesss for the company and can
+                      deal clients with ease.</p>
+                    <p>This is more like partime job where you can earn by just refering us clients who are looking for
+                      custom applications for their business needs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-5 col-md-offset-1">
+            <div class="job-form">
+              <div class="title-section">
+                <div class="title-content">
+                  <h2 class="wow slideInUp"><span>Apply For <i>A Job</i></span></h2>
+                </div>
+              </div>
+              <form #jobform="ngForm" (ngSubmit)="applyjob($event)" enctype="multipart/form-data" id="contact-us">
+                <div class="form-group">
+                  <label for="name">Name <small>*</small></label>
+                  <input [(ngModel)]="application.name" type="text" name="name" #name="ngModel" id="name" class="form-control" placeholder="Name" required />
+                  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">Name is required</div>
+                </div>
+                <div class="form-group">
+                  <label for="email"> Email <small>*</small></label>
+                  <input [(ngModel)]="application.email" type="email" name="email" #email="ngModel" id="email" class="form-control" placeholder="Email" required />
+                  <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">Email is required</div>
+                </div>
+                <div class="form-group">
+                  <label for="mobile"> Mobile Number <small>*</small></label>
+                  <input [(ngModel)]="application.mobile" type="text" name="mobile" #mobile="ngModel" id="mobile" class="form-control" placeholder="Mobile" required />
+                  <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" class="error">Mobile is required</div>
+                </div>
+                <div class="form-group">
+                  <label for="job"> Applying For <small>*</small></label>
+                  <input [(ngModel)]="application.job" type="text" name="job" id="job" #job="ngModel" class="form-control" placeholder="Applying For..." required>
+                  <div *ngIf="job.invalid && (job.dirty || job.touched)" class="error">Job Position is required</div>
+                </div>
+                <div class="form-group">
+                  <label for="resume"> Resume<small>*</small></label>
+                  <input ngModel type="file" name="resume" id="resume" (change)="onResumeChange($event)" #resume="ngModel" class="form-control" placeholder="Resume" required />
+                  <div *ngIf="resume.invalid && (resume.dirty || resume.touched)" class="error">Resume is required</div>
+                </div>
+                <div class="form-group">
+                  <label for="message"> Message</label>
+                  <textarea ngModel name="message" #message="ngModel" id="message" class="form-control" rows="5" placeholder="Message"></textarea>
+                </div>
+                <div class="contact-btn">
+                  <button type="submit" [disabled]="!jobform.valid" class="btn btn-info"><i class="icon-paper-airplane"></i> SEND</button>
+                  <div class="sMessage"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

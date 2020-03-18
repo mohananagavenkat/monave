@@ -8,13 +8,13 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 // component imports
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { ServicesComponent } from './services/services.component';
-import { CareersComponent } from './careers/careers.component';
-import { NavComponent } from './nav/nav.component';
-import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ServicesComponent } from './components/services/services.component';
+import { CareersComponent } from './components/careers/careers.component';
+import { NavComponent } from './components/nav/nav.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // other imports
 import { environment } from '../environments/environment'

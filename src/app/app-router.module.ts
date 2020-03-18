@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 // all components imports
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { ServicesComponent } from './services/services.component';
-import { CareersComponent } from './careers/careers.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ServicesComponent } from './components/services/services.component';
+import { CareersComponent } from './components/careers/careers.component';
 
 
 const appRoutes:Routes = [

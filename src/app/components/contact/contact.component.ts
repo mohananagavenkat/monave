@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientQueryService } from "../client-query.service";
-import { GeneralQueryService } from "../general-query.service";
-import { QueryModel } from "../models/query.model"
+import { ClientQueryService } from "../../services/client-query.service";
+import { GeneralQueryService } from "../../services/general-query.service";
+import { QueryModel } from "../../models/query.model"
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
