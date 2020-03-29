@@ -1,3 +1,3 @@
 export const appConfig = {
-  api:`http://localhost:3000/api/v1`
+  api:`https://monave-backend.herokuapp.com/api/v1`
 }
