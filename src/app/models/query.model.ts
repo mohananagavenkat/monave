@@ -1,4 +1,4 @@
-export class QueryModel {
+export interface QueryModel {
     key?:string;
     name:string;
     email:string;

@@ -21,7 +21,6 @@ export class ContactComponent implements OnInit {
     private titleService: Title, private metaService: Meta) { }
 
   ngOnInit() {
-    this.clientQueryService.previousQuries.subscribe((response) => { console.log(response) });
     this.titleService.setTitle('Contact Us - monave');
     this.metaService.updateTag({ name: 'description', content: 'If you are looking for the first-class talent to code your custom software or a compelling website or a mobile app, Just drop an email with your requirement we will come up with a solution.' });
     this.metaService.updateTag({ name: 'og:description', content: 'If you are looking for the first-class talent to code your custom software or a compelling website or a mobile app, Just drop an email with your requirement we will come up with a solution.' });
@@ -50,14 +49,18 @@ export class ContactComponent implements OnInit {
 
   clientQuerySubmit($event) {
     $event.preventDefault();
-    this.clientQueryService.store(this.clientQuery);
+    this.clientQueryService.store(this.clientQuery).subscribe(data => {
+      console.log(data);
+    });
     this.clientQuerySubmitted = true;
     this.initializeClientQuery();
   }
 
   generalQuerySubmit($event) {
     $event.preventDefault();
-    this.GeneralQueryService.store(this.generalQuery);
+    this.GeneralQueryService.store(this.generalQuery).subscribe(data => {
+      console.log(data);
+    });
     this.generalQuerySubmitted = true;
     this.initializeGeneralQuery();
   }

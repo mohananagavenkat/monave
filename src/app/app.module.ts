@@ -5,6 +5,8 @@ import { AppRouterModule } from './app-router.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 // component imports
 import { AppComponent } from './app.component';
@@ -18,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 // other imports
 import { environment } from '../environments/environment'
+import { ResumeValidator } from './directives/resume-validate.directive';
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { environment } from '../environments/environment'
     ServicesComponent,
     CareersComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    ResumeValidator
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,8 @@ import { environment } from '../environments/environment'
     AngularFireModule.initializeApp(environment.firebase,"monave"),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    HttpClientModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

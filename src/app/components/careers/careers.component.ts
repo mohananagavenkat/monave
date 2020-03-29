@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
+import { JobApplicationService } from 'src/app/services/job-application.service';
+import { Application } from 'src/app/models/application.model';
 
 @Component({
   selector: 'app-careers',
@@ -10,16 +12,16 @@ import { NgForm } from '@angular/forms';
 export class CareersComponent implements OnInit {
 
   @ViewChild('jobform') jobform: NgForm;
-  application = {
+  application:Application = {
     name: '',
     email: '',
     mobile: '',
     job: '',
     message: ''
   };
-  jobFormData = new FormData();
+  files: FileList
 
-  constructor(private titleService: Title, private metaService: Meta) { }
+  constructor(private titleService: Title, private metaService: Meta,private newApplication:JobApplicationService) { }
 
   ngOnInit() {
     this.titleService.setTitle('Careers - monave');
@@ -33,18 +35,15 @@ export class CareersComponent implements OnInit {
   }
 
   onResumeChange(event) {
-    const files: FileList = event.target.files;
-    console.log(files);
-    this.jobFormData.append('resume', files[0], files[0].name);
+    this.files = event.target.files;
   }
 
   applyjob(event: Event) {
     event.preventDefault();
     console.log(this.application);
-    for (let key in this.application) {
-      this.jobFormData.append(key, this.application[key]);
-    }
-    console.log(this.jobFormData.has('resume'));
+    // return;
+    this.newApplication.save({...this.application},this.files);
+    this.jobform.resetForm();
   }
 
 }

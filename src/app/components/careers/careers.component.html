@@ -83,32 +83,33 @@
               <form #jobform="ngForm" (ngSubmit)="applyjob($event)" enctype="multipart/form-data" id="contact-us">
                 <div class="form-group">
                   <label for="name">Name <small>*</small></label>
-                  <input [(ngModel)]="application.name" type="text" name="name" #name="ngModel" id="name" class="form-control" placeholder="Name" required />
+                  <input required [(ngModel)]="application.name" type="text" name="name" #name="ngModel" id="name" class="form-control" placeholder="Name" />
                   <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">Name is required</div>
                 </div>
                 <div class="form-group">
                   <label for="email"> Email <small>*</small></label>
-                  <input [(ngModel)]="application.email" type="email" name="email" #email="ngModel" id="email" class="form-control" placeholder="Email" required />
+                  <input required [(ngModel)]="application.email" type="email" name="email" #email="ngModel" id="email" class="form-control" placeholder="Email" />
                   <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">Email is required</div>
                 </div>
                 <div class="form-group">
                   <label for="mobile"> Mobile Number <small>*</small></label>
-                  <input [(ngModel)]="application.mobile" type="text" name="mobile" #mobile="ngModel" id="mobile" class="form-control" placeholder="Mobile" required />
+                  <input required [(ngModel)]="application.mobile" type="text" name="mobile" #mobile="ngModel" id="mobile" class="form-control" placeholder="Mobile" />
                   <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" class="error">Mobile is required</div>
                 </div>
                 <div class="form-group">
                   <label for="job"> Applying For <small>*</small></label>
-                  <input [(ngModel)]="application.job" type="text" name="job" id="job" #job="ngModel" class="form-control" placeholder="Applying For..." required>
+                  <input required [(ngModel)]="application.job" type="text" name="job" id="job" #job="ngModel" class="form-control" placeholder="Applying For...">
                   <div *ngIf="job.invalid && (job.dirty || job.touched)" class="error">Job Position is required</div>
                 </div>
                 <div class="form-group">
                   <label for="resume"> Resume<small>*</small></label>
-                  <input ngModel type="file" name="resume" id="resume" (change)="onResumeChange($event)" #resume="ngModel" class="form-control" placeholder="Resume" required />
-                  <div *ngIf="resume.invalid && (resume.dirty || resume.touched)" class="error">Resume is required</div>
+                  <input required ngModel type="file" name="resume" id="resume" (change)="onResumeChange($event)" #resume="ngModel" class="form-control" placeholder="Resume" resumevalidate />
+                  <div *ngIf="resume.errors?.required && (resume.dirty || resume.touched)" class="error">Resume is required</div>
+                  <div *ngIf="resume.errors?.accept && (resume.dirty || resume.touched)" class="error">Only .pdf, .docx, .doc are allowed</div>
                 </div>
                 <div class="form-group">
                   <label for="message"> Message</label>
-                  <textarea ngModel name="message" #message="ngModel" id="message" class="form-control" rows="5" placeholder="Message"></textarea>
+                  <textarea [(ngModel)]="application.message" name="message" #message="ngModel" id="message" class="form-control" rows="5" placeholder="Message"></textarea>
                 </div>
                 <div class="contact-btn">
                   <button type="submit" [disabled]="!jobform.valid" class="btn btn-info"><i class="icon-paper-airplane"></i> SEND</button>
